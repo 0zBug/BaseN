@@ -8,9 +8,9 @@ local function BaseN.new(N)
 		local Encoded = {}
 		
 		while Number > 0 do
-			table.insert(Encoded, 1, (Number % Base))
+			table.insert(Encoded, 1, (Number % N))
 			
-		    Number = math.floor(Number / Base)
+		    Number = math.floor(Number / N)
 		end
 		
 		return string.char(table.unpack(Encoded))
@@ -21,7 +21,7 @@ local function BaseN.new(N)
 		
 		local Decoded = 0
 		for Index = 1, #Table do
-			Decoded = Decoded + Table[#Table - Index + 1] * Base ^ (Index - 1) 
+			Decoded = Decoded + Table[#Table - Index + 1] * N ^ (Index - 1) 
 		end
 		
 		return Decoded
