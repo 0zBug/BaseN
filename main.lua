@@ -1,7 +1,7 @@
 
 local BaseN = {}
 
-local function BaseN.new(N)
+function BaseN.new(N)
 	local Base = {}
 	
 	Base.Encode = function(Number)
